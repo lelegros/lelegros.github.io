@@ -1,6 +1,7 @@
 html
 {
     height: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 body
@@ -8,21 +9,40 @@ body
     height: 100%;
     width: 100%;
     margin: 0 0 0 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-header /* typiquement vaut mieux target span/div ou un id précise pour le format*/
+header
 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color : whitesmoke;
+    color :white;
     background-color: black;
     height: 80px;
+    min-height: 80px;
     width: 100%;
+    position: fixed;
 }
 
 
 section
 {
     height: 100%;
+    min-height: 200px;
+}
+
+footer
+{
+    position: fixed;
+    height: 300px;
+    min-height: 300px;
+    width: 100%;
+    background-color:black;
+    color: white;
+    z-index: 3;
 }
 
 #divmap
@@ -48,6 +68,41 @@ section
 
 }
 
+#batimentname
+{
+    font-size: 40px;
+}
+
+#fcontent
+{
+    height: 100%;
+    width: 100%;
+    background-color:rgb(255, 100, 50);
+    display: flex;
+    padding: 10px 10px 10px 10px;
+}
+
+#upgradebutton
+{
+    border: 5px solid black;
+    padding: 5px 5px 5px 5px;
+    height: 40px;
+    width: 100px;
+    background-color:rgb(255, 75, 38);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#upgradebutton:hover
+{
+    background-color:rgb(255, 50, 25);
+}
+
+#upgradebutton:active
+{
+    background-color:rgb(255, 25, 13);
+}
 
 .canvas
 {
