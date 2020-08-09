@@ -104,6 +104,13 @@ footer
     background-color:rgb(255, 25, 13);
 }
 
+#parameters
+{
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+}
+
 .canvas
 {
     position: absolute;
