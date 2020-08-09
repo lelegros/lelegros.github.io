@@ -28,6 +28,7 @@ window.addEventListener("mouseup", function(event) {
     }
     else if (batiment == "" && openedscroll)
     {
+        console.log(event); //A fixer
         if (!event.path.includes(document.getElementById("footscroll")))
             scrolldown();
     }
