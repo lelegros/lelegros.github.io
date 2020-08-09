@@ -29,7 +29,7 @@ function popuptext(batiment_id, popup) {
     if (batiment_id == "knight")
         popup.innerHTML = "C'est le Knight";
     if (batiment_id == "quirell")
-        popup.innerHTML = "C'est quirell";
+        popup.innerHTML = "C'est Quirell";
 }
 
 function deletepopup() {
