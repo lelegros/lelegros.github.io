@@ -1,8 +1,3 @@
-window.addEventListener("mousedown", function(event) {
-    if (event.button == 2)
-        document.body.style.cursor = "none";
-})
-
 window.addEventListener("mouseup", function(event) {
     document.body.style.cursor = "default";
     document.removeEventListener("mousemove", movet);
@@ -22,7 +17,8 @@ window.addEventListener("mouseup", function(event) {
                     scrolldown();
             }
         }
-        else if (batiment.offsetTop < 0 || batiment.offsetTop > window.innerHeight - batiment.offsetHeight || batiment.offsetLeft < 0 || batiment.offsetLeft > window.innerWidth - batiment.offsetWidth)
+        else if (batiment.offsetTop < 0 || batiment.offsetTop > window.innerHeight - batiment.offsetHeight 
+            || batiment.offsetLeft < 0 || batiment.offsetLeft > window.innerWidth - batiment.offsetWidth)
         {
             batiment.style.top = oldtop;
             batiment.style.left = oldleft;
