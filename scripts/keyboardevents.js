@@ -3,9 +3,7 @@ document.addEventListener('keydown', function(event) {
     {
         if (openedscroll && document.getElementById("footscroll").style.bottom == "0px")
             scrolldown();
-    }
-    if(event.keyCode == 84)
-    {
-        console.log(event);
+        if (document.getElementById("parammenu").hidden == false)
+            document.getElementById("parammenu").hidden = true;
     }
 });

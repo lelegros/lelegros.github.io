@@ -17,7 +17,7 @@ window.addEventListener("mouseup", function(event) {
                     scrolldown();
             }
         }
-        else if (batiment.offsetTop < 0 || batiment.offsetTop > window.innerHeight - batiment.offsetHeight 
+        else if (batiment.offsetTop < 80 || batiment.offsetTop > window.innerHeight - batiment.offsetHeight 
             || batiment.offsetLeft < 0 || batiment.offsetLeft > window.innerWidth - batiment.offsetWidth)
         {
             batiment.style.top = oldtop;

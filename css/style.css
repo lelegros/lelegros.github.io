@@ -32,6 +32,7 @@ section
 {
     height: 100%;
     min-height: 200px;
+    background-color: #eeeeee;
 }
 
 footer
@@ -109,6 +110,20 @@ footer
     position: fixed;
     bottom: 5px;
     right: 5px;
+}
+
+#parammenu
+{
+    position: fixed;
+    bottom: 35px;
+    right: 5px;
+    background-color: blue;
+    padding: 5px 5px 5px 5px;
+}
+
+#paramdark
+{
+    display: flex;
 }
 
 .canvas
