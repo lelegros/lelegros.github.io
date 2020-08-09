@@ -27,9 +27,11 @@ function createpopup(x, y, batiment_id) {
 
 function popuptext(batiment_id, popup) {
     if (batiment_id == "hornet")
-        popup.innerHTML = "Ce batiment est un : Hornet";
+        popup.innerHTML = "C'est Hornet";
     if (batiment_id == "knight")
-        popup.innerHTML = "Ce batiment est un : Connard";
+        popup.innerHTML = "C'est le knight";
+    if (batiment_id.id == "quirell")
+        popup.innerHTML = "C'est quirell";
 }
 
 function deletepopup() {
