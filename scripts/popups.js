@@ -7,7 +7,6 @@ while (i < batiments.length)
         var y = event.clientY;
         var buttonPressed = event.button;
         var batiment_id = event.srcElement.id;
-
         if (buttonPressed == 2)
             createpopup(x, y, batiment_id);
     });
@@ -16,7 +15,6 @@ while (i < batiments.length)
 
 function createpopup(x, y, batiment_id) {
     var popup = document.createElement("div");
-
     popup.id = "popup";
     section.appendChild(popup);
     popup.style.top = y + "px";
@@ -29,7 +27,7 @@ function popuptext(batiment_id, popup) {
     if (batiment_id == "hornet")
         popup.innerHTML = "C'est Hornet";
     if (batiment_id == "knight")
-        popup.innerHTML = "C'est le knight";
+        popup.innerHTML = "C'est le Knight";
     if (batiment_id == "quirell")
         popup.innerHTML = "C'est quirell";
 }
