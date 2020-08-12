@@ -11,6 +11,8 @@ var emerald = 0;
 var gold = 0; //6
 var diamond = 0;
 
+//fdp
+
 function openmenu(name)
 {
     if (document.getElementById("footscroll").style.bottom == "-300px" || document.getElementById("footscroll").style.bottom == "0px")
