@@ -2,12 +2,13 @@ var hornet = document.getElementById("hornet");
 var knight = document.getElementById("knight");
 var quirell = document.getElementById("quirell");
 var section = document.getElementById("section");
-var batiments = document.getElementsByClassName("batiment");
+var buildings = document.getElementsByClassName("building");
 var i = 0;
-var batiment = "";
+var building = "";
 var oldtop = "";
 var oldbot = "";
 var openedscroll = "";
+var openedmenu = 0;
 
 document.getElementById("footscroll").style.bottom = -300 + "px";
 hornet.lvl = 1;

@@ -1,6 +1,8 @@
 function scrollup(sbatiemnt) {
+    if (openedmenu)
+        closemenu();
     openedscroll = sbatiemnt.id;
-    document.getElementById("batimentname").innerHTML = sbatiemnt.name + " lvl " + sbatiemnt.lvl;
+    document.getElementById("fbuildingname").innerHTML = sbatiemnt.name + " lvl " + sbatiemnt.lvl;
     if (document.getElementById("footscroll").style.bottom == "-300px")
     {
         var scrollfooterup = setInterval(function() {
@@ -26,5 +28,5 @@ function scrolldown()
 
 document.getElementById("upgradebutton").addEventListener("mouseup", function(event) {
     document.getElementById(openedscroll).lvl++;
-    document.getElementById("batimentname").innerHTML = document.getElementById(openedscroll).name + " lvl " + document.getElementById(openedscroll).lvl;
+    document.getElementById("fbuildingname").innerHTML = document.getElementById(openedscroll).name + " lvl " + document.getElementById(openedscroll).lvl;
 });

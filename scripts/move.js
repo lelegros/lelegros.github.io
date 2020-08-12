@@ -1,8 +1,8 @@
 function movet(event) {
-    if (batiment != "")
+    if (building != "")
     {
-        batiment.style.top = event.clientY - (batiment.clientHeight / 2) + "px";
-        batiment.style.left = event.clientX - (batiment.clientWidth / 2) + "px";
+        building.style.top = event.clientY - (building.clientHeight / 2) + "px";
+        building.style.left = event.clientX - (building.clientWidth / 2) + "px";
         draw();
     }
 }

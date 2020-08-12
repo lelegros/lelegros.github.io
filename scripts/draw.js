@@ -1,6 +1,6 @@
 function drawer(ele1, ele2) {
     
-    var domcanvas = document.getElementById("Canvas01");
+    var domcanvas = document.getElementById("canvas");
     var hftop = ele1.offsetTop;
     var hfheight = ele1.offsetHeight;
     var hfleft = ele1.offsetLeft;
@@ -19,13 +19,12 @@ function drawer(ele1, ele2) {
 
 function draw()
 {
-    if (document.getElementById("Canvas01"))
-        document.getElementById("Canvas01").remove();
+    if (document.getElementById("canvas"))
+        document.getElementById("canvas").remove();
     var canvas = document.createElement("canvas");
+    canvas.id = "canvas";
     canvas.height = window.innerHeight;
     canvas.width = window.innerWidth;
-    canvas.id = "Canvas01";
-    canvas.setAttribute("class", "canvas");
     section.appendChild(canvas);
 
     drawer(hornet, knight);

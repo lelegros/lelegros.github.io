@@ -6,4 +6,11 @@ document.addEventListener('keydown', function(event) {
         if (document.getElementById("parammenu").hidden == false)
             document.getElementById("parammenu").hidden = true;
     }
+    if(event.keyCode == 77)
+    {
+        if (openedmenu)
+            closemenu();
+        else
+            openmenu("mine");
+    }
 });

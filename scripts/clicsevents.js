@@ -3,48 +3,50 @@ window.addEventListener("mouseup", function(event) {
     document.removeEventListener("mousemove", movet);
     if (document.getElementById("popup")) 
         deletepopup();
-    if (batiment != "")
+    if (building != "")
     {
-        if (batiment.style.top == oldtop && batiment.style.left == oldleft)
+        if (building.style.top == oldtop && building.style.left == oldleft)
         {
             if (document.getElementById("footscroll").style.bottom == "-300px")
-                scrollup(batiment);
+                scrollup(building);
             else if (document.getElementById("footscroll").style.bottom == "0px")
             {
-                if (openedscroll != batiment.id)
-                    scrollup(batiment);
+                if (openedscroll != building.id)
+                    scrollup(building);
                 else
                     scrolldown();
             }
         }
-        else if (batiment.offsetTop < 80 || batiment.offsetTop > window.innerHeight - batiment.offsetHeight 
-            || batiment.offsetLeft < 0 || batiment.offsetLeft > window.innerWidth - batiment.offsetWidth)
+        else if (building.offsetTop < 80 || building.offsetTop > window.innerHeight - building.offsetHeight 
+            || building.offsetLeft < 0 || building.offsetLeft > window.innerWidth - building.offsetWidth)
         {
-            batiment.style.top = oldtop;
-            batiment.style.left = oldleft;
+            building.style.top = oldtop;
+            building.style.left = oldleft;
             draw();
         }
-        batiment = "";
+        building = "";
     }
-    else if (batiment == "" && openedscroll)
+    else if (building == "" && openedscroll)
     {
-        if (event.srcElement.id != "footscroll" && event.srcElement.id != "fcontent" && event.srcElement.id != "upgradebutton")
+        if (event.srcElement.id != "footscroll" && event.srcElement.id != "fcontent" && event.srcElement.id != "upgradebutton" && event.srcElement.id != "upgradetext")
             scrolldown();
     }
+    //if (building == "" && openedmenu)
+     //   closemenu();
 });
 
 i = 0;
 
-while (i < batiments.length)
+while (i < buildings.length)
 {
-    batiments[i].addEventListener("mousedown", function(event) {
+    buildings[i].addEventListener("mousedown", function(event) {
         event.preventDefault();
         var buttonPressed = event.button;
         if (buttonPressed == 0)
         {
-            batiment = document.getElementById(event.srcElement.id);
-            oldtop = batiment.style.top;
-            oldleft = batiment.style.left;
+            building = document.getElementById(event.srcElement.id);
+            oldtop = building.style.top;
+            oldleft = building.style.left;
             document.addEventListener("mousemove", movet);
         }
     });

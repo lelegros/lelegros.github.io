@@ -4,6 +4,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="css/style.css" />
+		<link rel="icon" href="favicon.ico" />
 		<title>L'Idle</title>
 	</head>
 
@@ -15,24 +16,90 @@
 		</header>
 		<section id="section">
 			<div id="divmap">
-				<img id="hornet" name="Hornet" class="batiment" src="data/images/hornet.png" style="height: 100px; width: auto; z-index: 1;">
-				<img id="knight" name="Knight" class="batiment" src="data/images/knight.png" style="height: 100px; width: auto; z-index: 1;">
-				<img id="quirell" name="Quirell" class="batiment" src="data/images/quirell.png" style="height: 100px; width: auto; z-index: 1;">
+				<img id="hornet" name="Hornet" class="building" src="data/images/hornet.png">
+				<img id="knight" name="Knight" class="building" src="data/images/knight.png">
+				<img id="quirell" name="Quirell" class="building" src="data/images/quirell.png">
+			</div>
+			<div id="batmenupop">
+				<div id="batmenuname">
+					Building
+				</div>
+				<div id="batmenucontent">
+					<div id="batmenucontentrows">
+						<div id="batmenucontentrow1" class="batmenurow">
+							<div id="batmenubutton1" class="batmenubutton">
+								<div id="batmenubutton1title">
+									<span id="batmenubutton1name">Box1</span><span>&nbsp;lvl&nbsp;</span><span id="batmenubutton1lvl">0</span>
+								</div>
+							</div>
+							<div id="batmenubutton2" class="batmenubutton">
+								<div id="batmenubutton2title">
+									<span id="batmenubutton2name">Box2</span><span>&nbsp;lvl&nbsp;</span><span id="batmenubutton2lvl">0</span>
+								</div>
+							</div>
+							<div id="batmenubutton3" class="batmenubutton">
+								<div id="batmenubutton3title">
+									<span id="batmenubutton3name">Box3</span><span>&nbsp;lvl&nbsp;</span><span id="batmenubutton3lvl">0</span>
+								</div>
+							</div>
+						</div>
+						<div id="batmenucontentrow2" class="batmenurow">
+							<div id="batmenubutton4" class="batmenubutton">
+								<div id="batmenubutton4title">
+									<span id="batmenubutton4name">Box4</span><span>&nbsp;lvl&nbsp;</span><span id="batmenubutton4lvl">0</span>
+								</div>
+							</div>
+							<div id="batmenubutton5" class="batmenubutton">
+								<div id="batmenubutton5title">
+									<span id="batmenubutton5name">Box5</span><span>&nbsp;lvl&nbsp;</span><span id="batmenubutton5lvl">0</span>
+								</div>
+							</div>
+							<div id="batmenubutton6" class="batmenubutton">
+								<div id="batmenubutton6title">
+									<span id="batmenubutton6name">Box6</span><span>&nbsp;lvl&nbsp;</span><span id="batmenubutton6lvl">0</span>
+								</div>
+							</div>
+						</div>
+						<div id="batmenucontentrow3" class="batmenurow">
+							<div id="batmenubutton7" class="batmenubutton">
+								<div id="batmenubutton7title">
+									<span id="batmenubutton7name">Box7</span><span>&nbsp;lvl&nbsp;</span><span id="batmenubutton7lvl">0</span>
+								</div>
+							</div>
+							<div id="batmenubutton8" class="batmenubutton">
+								<div id="batmenubutton8title">
+									<span id="batmenubutton8name">Box8</span><span>&nbsp;lvl&nbsp;</span><span id="batmenubutton8lvl">0</span>
+								</div>
+							</div>
+							<div id="batmenubutton9" class="batmenubutton">
+								<div id="batmenubutton9title">
+									<span id="batmenubutton9name">Box9</span><span>&nbsp;lvl&nbsp;</span><span id="batmenubutton9lvl">0</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="batmenucontentspecials">
+						<div id="batmenubutton10" class="batmenubuttonsspecials">
+						</div>
+						<div id="batmenubutton11" class="batmenubuttonsspecials">
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 		<footer id="footscroll">
-			<div id="batimentname">
+			<div id="fbuildingname">
 			</div>
 			<div id="fcontent">
 				<div id="upgradebutton">
-					UPGRADE
+					<span id="upgradetext">UPGRADE</span>
 				</div>
 			</div>
 			<div id="parameters">
 				<img id="paramicon" src="data/images/param.png" style="height: 25px; width: auto; z-index: 1;">
 				<div id="parammenu" hidden>
 					<div id="paramdark">
-						<span>Dark mode :&nbsp;</span><div id="darkonoff">OFF</div>
+						<span>Dark mode :&nbsp;</span><span id="darkonoff">OFF</span>
 					</div>
 				</div>
 			</div>
@@ -47,5 +114,6 @@
 		<script src="scripts/keyboardevents.js"></script>
 		<script src="scripts/footer.js"></script>
 		<script src="scripts/parameters.js"></script>
+		<script src="scripts/batmenupop.js"></script>
 	</body>
 </html>
