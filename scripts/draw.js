@@ -29,10 +29,19 @@ function draw()
 
     drawer(hornet, knight);
     drawer(hornet, quirell);
-    drawer(knight, quirell);
     drawer(hornet, mine);
     drawer(hornet, foret);
     drawer(hornet, port);
+    drawer(knight, quirell);
+    drawer(knight, foret);
+    drawer(knight, port);
+    drawer(knight, mine);
+    drawer(quirell, mine);
+    drawer(quirell, foret);
+    drawer(quirell, port);
+    drawer(mine, port);
+    drawer(mine, foret);
+    drawer(foret, port);
 }
 
 draw();
