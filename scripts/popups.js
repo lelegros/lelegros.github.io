@@ -30,6 +30,12 @@ function popuptext(building_id, popup) {
         popup.innerHTML = "C'est le Knight";
     if (building_id == "quirell")
         popup.innerHTML = "C'est Quirell";
+    if (building_id == "mine")
+        popup.innerHTML = "C'est la mine";
+    if (building_id == "foret")
+        popup.innerHTML = "C'est la foret";
+    if (building_id == "port")
+        popup.innerHTML = "C'est le port";
 }
 
 function deletepopup() {

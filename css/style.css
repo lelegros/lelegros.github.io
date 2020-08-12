@@ -50,6 +50,7 @@ footer
     height: 100%;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
@@ -158,6 +159,15 @@ footer
 #paramdark
 {
     display: flex;
+}
+
+.imges
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70%;
+    width: 100%;
 }
 
 .building

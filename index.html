@@ -9,90 +9,99 @@
 	</head>
 
 	<body>
-		<header>
+		<header id="header">
 			<div>
 				<span>Energie : </span><span id="energie">0</span><span> / </span><span id="maxenergie">100</span>
 			</div>
 		</header>
 		<section id="section">
 			<div id="divmap">
-				<img id="hornet" name="Hornet" class="building" src="data/images/hornet.png">
-				<img id="knight" name="Knight" class="building" src="data/images/knight.png">
-				<img id="quirell" name="Quirell" class="building" src="data/images/quirell.png">
+				<div class="imges">
+					<img id="mine" name="Mine" class="building" src="data/images/mine.png">
+					<img id="port" name="Port" class="building" src="data/images/port.png">          <!-- Arborescense de mort -->
+					<img id="foret" name="Foret" class="building" src="data/images/foret.png">
+				</div>
+				<div class="imges">
+					<img id="hornet" name="Hornet" class="building" src="data/images/hornet.png">
+					<img id="knight" name="Knight" class="building" src="data/images/knight.png">          <!-- Arborescense de mort -->
+					<img id="quirell" name="Quirell" class="building" src="data/images/quirell.png">
+				</div>
 			</div>
 			<div id="batmenupop">
 				<div id="batmenuname">
 					Building
 				</div>
-				<div id="batmenucontent">
-					<div id="batmenucontentrows">
-						<div id="batmenucontentrow1" class="batmenurow">
-							<div id="batmenubutton1" class="batmenubutton">
-								<div id="batmenubutton1title">
-									<span id="batmenubutton1name">Box1</span><span>&nbsp;lvl&nbsp;</span><span id="batmenubutton1lvl">0</span>
+				<div id="batmenucontent" class="closemenu">
+					<div id="batmenucontentrows" class="closemenu">
+						<div id="batmenucontentrow1" class="batmenurow closemenu">
+							<div id="batmenubutton1" class="batmenubutton closemenu">
+								<div id="batmenubutton1title" class="closemenu">
+									<span id="batmenubutton1name" class="closemenu">Box1</span>
 								</div>
 							</div>
-							<div id="batmenubutton2" class="batmenubutton">
-								<div id="batmenubutton2title">
-									<span id="batmenubutton2name">Box2</span><span>&nbsp;lvl&nbsp;</span><span id="batmenubutton2lvl">0</span>
+							<div id="batmenubutton2" class="batmenubutton closemenu">
+								<div id="batmenubutton2title" class="closemenu">
+									<span id="batmenubutton2name" class="closemenu">Box2</span>
 								</div>
 							</div>
-							<div id="batmenubutton3" class="batmenubutton">
-								<div id="batmenubutton3title">
-									<span id="batmenubutton3name">Box3</span><span>&nbsp;lvl&nbsp;</span><span id="batmenubutton3lvl">0</span>
-								</div>
-							</div>
-						</div>
-						<div id="batmenucontentrow2" class="batmenurow">
-							<div id="batmenubutton4" class="batmenubutton">
-								<div id="batmenubutton4title">
-									<span id="batmenubutton4name">Box4</span><span>&nbsp;lvl&nbsp;</span><span id="batmenubutton4lvl">0</span>
-								</div>
-							</div>
-							<div id="batmenubutton5" class="batmenubutton">
-								<div id="batmenubutton5title">
-									<span id="batmenubutton5name">Box5</span><span>&nbsp;lvl&nbsp;</span><span id="batmenubutton5lvl">0</span>
-								</div>
-							</div>
-							<div id="batmenubutton6" class="batmenubutton">
-								<div id="batmenubutton6title">
-									<span id="batmenubutton6name">Box6</span><span>&nbsp;lvl&nbsp;</span><span id="batmenubutton6lvl">0</span>
+							<div id="batmenubutton3" class="batmenubutton closemenu">
+								<div id="batmenubutton3title" class="closemenu">
+									<span id="batmenubutton3name" class="closemenu">Box3</span>
 								</div>
 							</div>
 						</div>
-						<div id="batmenucontentrow3" class="batmenurow">
-							<div id="batmenubutton7" class="batmenubutton">
-								<div id="batmenubutton7title">
-									<span id="batmenubutton7name">Box7</span><span>&nbsp;lvl&nbsp;</span><span id="batmenubutton7lvl">0</span>
+						<div id="batmenucontentrow2" class="batmenurow closemenu">
+							<div id="batmenubutton4" class="batmenubutton closemenu">
+								<div id="batmenubutton4title" class="closemenu">
+									<span id="batmenubutton4name" class="closemenu">Box4</span>
 								</div>
 							</div>
-							<div id="batmenubutton8" class="batmenubutton">
-								<div id="batmenubutton8title">
-									<span id="batmenubutton8name">Box8</span><span>&nbsp;lvl&nbsp;</span><span id="batmenubutton8lvl">0</span>
+							<div id="batmenubutton5" class="batmenubutton closemenu">
+								<div id="batmenubutton5title" class="closemenu">
+									<span id="batmenubutton5name" class="closemenu">Box5</span>
 								</div>
 							</div>
-							<div id="batmenubutton9" class="batmenubutton">
-								<div id="batmenubutton9title">
-									<span id="batmenubutton9name">Box9</span><span>&nbsp;lvl&nbsp;</span><span id="batmenubutton9lvl">0</span>
+							<div id="batmenubutton6" class="batmenubutton closemenu">
+								<div id="batmenubutton6title" class="closemenu">
+									<span id="batmenubutton6name" class="closemenu">Box6</span>
+								</div>
+							</div>
+						</div>
+						<div id="batmenucontentrow3" class="batmenurow closemenu">
+							<div id="batmenubutton7" class="batmenubutton closemenu">
+								<div id="batmenubutton7title" class="closemenu">
+									<span id="batmenubutton7name" class="closemenu">Box7</span>
+								</div>
+							</div>
+							<div id="batmenubutton8" class="batmenubutton closemenu">
+								<div id="batmenubutton8title" class="closemenu">
+									<span id="batmenubutton8name" class="closemenu">Box8</span>
+								</div>
+							</div>
+							<div id="batmenubutton9" class="batmenubutton closemenu">
+								<div id="batmenubutton9title" class="closemenu">
+									<span id="batmenubutton9name" class="closemenu">Box9</span>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div id="batmenucontentspecials">
-						<div id="batmenubutton10" class="batmenubuttonsspecials">
+					<div id="batmenucontentspecials" class="closemenu">
+						<div id="batmenubutton10" class="batmenubuttonsspecials closemenu">
+							<span class="closemenu">UPGRADES</span>
 						</div>
-						<div id="batmenubutton11" class="batmenubuttonsspecials">
+						<div id="batmenubutton11" class="batmenubuttonsspecials closemenu">
+							<span class="closemenu">SEND BOATS</span>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<footer id="footscroll">
+		<footer id="footscroll" class="closefoot">
 			<div id="fbuildingname">
 			</div>
-			<div id="fcontent">
-				<div id="upgradebutton">
-					<span id="upgradetext">UPGRADE</span>
+			<div id="fcontent" class="closefoot">
+				<div id="upgradebutton" class="closefoot">
+					<span id="upgradetext" class="closefoot">UPGRADE</span>
 				</div>
 			</div>
 			<div id="parameters">
@@ -108,7 +117,6 @@
 		<script src="scripts/draw.js"></script>
 		<script src="scripts/move.js"></script>
 		<script src="scripts/popups.js"></script>
-		<script src="scripts/onload.js"></script>
 		<script src="scripts/compteur.js"></script>
 		<script src="scripts/clicsevents.js"></script>
 		<script src="scripts/keyboardevents.js"></script>

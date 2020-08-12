@@ -1,4 +1,4 @@
-function movet(event) {
+function move(event) {
     if (building != "")
     {
         building.style.top = event.clientY - (building.clientHeight / 2) + "px";

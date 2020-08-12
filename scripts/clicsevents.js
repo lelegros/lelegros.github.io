@@ -1,13 +1,20 @@
 window.addEventListener("mouseup", function(event) {
     document.body.style.cursor = "default";
-    document.removeEventListener("mousemove", movet);
+    document.removeEventListener("mousemove", move);
     if (document.getElementById("popup")) 
         deletepopup();
     if (building != "")
     {
         if (building.style.top == oldtop && building.style.left == oldleft)
         {
-            if (document.getElementById("footscroll").style.bottom == "-300px")
+            if (building.id == "mine" || building.id == "port" || building.id == "foret")
+            {
+                if (openedmenu == building.id)
+                    closemenu();
+                else
+                    openmenu(building.id);
+            }
+            else if (document.getElementById("footscroll").style.bottom == "-300px")
                 scrollup(building);
             else if (document.getElementById("footscroll").style.bottom == "0px")
             {
@@ -17,7 +24,7 @@ window.addEventListener("mouseup", function(event) {
                     scrolldown();
             }
         }
-        else if (building.offsetTop < 80 || building.offsetTop > window.innerHeight - building.offsetHeight 
+        else if (building.offsetTop < document.getElementById("header").offsetHeight || building.offsetTop > window.innerHeight - building.offsetHeight 
             || building.offsetLeft < 0 || building.offsetLeft > window.innerWidth - building.offsetWidth)
         {
             building.style.top = oldtop;
@@ -28,11 +35,12 @@ window.addEventListener("mouseup", function(event) {
     }
     else if (building == "" && openedscroll)
     {
-        if (event.srcElement.id != "footscroll" && event.srcElement.id != "fcontent" && event.srcElement.id != "upgradebutton" && event.srcElement.id != "upgradetext")
+        if (!event.srcElement.classList.contains("closemenu"))
             scrolldown();
     }
-    //if (building == "" && openedmenu)
-     //   closemenu();
+    else if (building == "" && openedmenu)
+        if (!event.srcElement.classList.contains("closemenu"))
+            closemenu();
 });
 
 i = 0;
@@ -47,7 +55,7 @@ while (i < buildings.length)
             building = document.getElementById(event.srcElement.id);
             oldtop = building.style.top;
             oldleft = building.style.left;
-            document.addEventListener("mousemove", movet);
+            document.addEventListener("mousemove", move);
         }
     });
     i++;
