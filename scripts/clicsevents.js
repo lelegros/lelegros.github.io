@@ -1,8 +1,6 @@
 window.addEventListener("mouseup", function(event) {
     document.body.style.cursor = "default";
     document.removeEventListener("mousemove", move);
-    var mouse_y = event.pageY;
-    console.log(mouse_y);
     if (document.getElementById("popup")) 
         deletepopup();
     if (building != "")
