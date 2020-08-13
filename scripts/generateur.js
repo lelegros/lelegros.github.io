@@ -1,10 +1,13 @@
 var max_energie = 100;
 var energie = 100;
+var mine_cost = 0;
+var forest_cost = 0;
 var generateur_stone_requirement = 10;
 
 function opengenerator()
 {
         document.getElementById("upgradetext").innerHTML = "Upgrade : " + generateur_stone_requirement + " Stone ";
+
 }
 
 function upgradegenerator()
@@ -23,3 +26,17 @@ function upgradegenerator()
         
         }
 }
+
+function cost()
+{
+        energie = max_energie - (mine_cost + forest_cost);
+        document.getElementById("energie").innerHTML = energie;
+        document.getElementById("mine_energie_text").innerHTML = "Reset energy mine cost : " + mine_cost;
+        document.getElementById("forest_energie_text").innerHTML = "Reset forest mine cost : " + forest_cost;
+}
+
+function reset_cost()
+{
+
+}
+
