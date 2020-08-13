@@ -20,7 +20,7 @@ window.addEventListener("mouseup", function(event) {
             {
                 if (openedscroll != building.id)
                     scrollup(building);
-                else
+                else if
                     scrolldown();
             }
         }
@@ -33,7 +33,7 @@ window.addEventListener("mouseup", function(event) {
         }
         building = "";
     }
-    else if (building == "" && openedscroll)
+    else if (building == "" && openedscroll && event.pageY < 638)
     {
         if (!event.srcElement.classList.contains("closemenu"))
             scrolldown();
