@@ -68,3 +68,30 @@ document.getElementById("upgradebutton").addEventListener("mouseup", function(ev
         
     }
 });
+
+i = 1;
+while (i < 2)
+{
+    document.getElementById("plus" + i).addEventListener("mouseup", function(event) {
+        if (parseInt(document.getElementById("energie").innerHTML) - 10 >= 0)
+        {
+            document.getElementById("batmenubutton" + event.srcElement.id[4] + "lvl").innerHTML = parseInt(document.getElementById("batmenubutton" + event.srcElement.id[4] + "lvl").innerHTML) + 1;
+            compteur("batmenubutton" + event.srcElement.id[4] + "qt", 1000 / parseInt(document.getElementById("batmenubutton" + event.srcElement.id[4] + "lvl").innerHTML), document.getElementById("batmenubutton" + event.srcElement.id[4] + "name").innerHTML);
+            energie -= 10;
+            document.getElementById("energie").innerHTML = energie;
+        }
+    })
+    document.getElementById("minus" + i).addEventListener("mouseup", function(event) {
+        if ( parseInt(document.getElementById("batmenubutton" + event.srcElement.id[5] + "lvl").innerHTML) > 0)
+        {
+            document.getElementById("batmenubutton" + event.srcElement.id[5] + "lvl").innerHTML = parseInt(document.getElementById("batmenubutton" + event.srcElement.id[5] + "lvl").innerHTML) - 1;
+            energie += 10
+            document.getElementById("energie").innerHTML = energie;
+            if (document.getElementById("batmenubutton" + event.srcElement.id[5] + "lvl").innerHTML != "0")
+                compteur("batmenubutton" + event.srcElement.id[5] + "qt", 1000 / parseInt(document.getElementById("batmenubutton" + event.srcElement.id[5] + "lvl").innerHTML), document.getElementById("batmenubutton" + event.srcElement.id[5] + "name").innerHTML);
+            else
+                clearInterval(increase);
+        }
+    })
+    i++;
+}

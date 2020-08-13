@@ -7,6 +7,7 @@ function compteur(id, speed, variable)
         {
             stone++;
             document.getElementById(id).innerHTML = stone;
+            document.getElementById("stone").innerHTML = stone;
         }
     }, speed);
 }
