@@ -27,21 +27,11 @@ function draw()
     canvas.width = window.innerWidth;
     section.appendChild(canvas);
 
-    drawer(hornet, knight);
-    drawer(hornet, quirell);
-    drawer(hornet, mine);
-    drawer(hornet, foret);
-    drawer(hornet, port);
-    drawer(knight, quirell);
-    drawer(knight, foret);
-    drawer(knight, port);
-    drawer(knight, mine);
-    drawer(quirell, mine);
-    drawer(quirell, foret);
-    drawer(quirell, port);
-    drawer(mine, port);
-    drawer(mine, foret);
-    drawer(foret, port);
+    drawer(generateur, knight);
+    drawer(generateur, quirell);
+    drawer(generateur, mine);
+    drawer(generateur, foret);
+    drawer(generateur, port);
 }
 
 draw();

@@ -24,8 +24,8 @@ function createpopup(x, y, building_id) {
 }
 
 function popuptext(building_id, popup) {
-    if (building_id == "hornet")
-        popup.innerHTML = "C'est Hornet";
+    if (building_id == "generateur")
+        popup.innerHTML = "C'est generateur";
     if (building_id == "knight")
         popup.innerHTML = "C'est le Knight";
     if (building_id == "quirell")

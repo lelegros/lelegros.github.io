@@ -1,6 +1,6 @@
 var stone = 0; //1
 var quartz = 0;
-var agrile = 0;
+var agrile = 0; //2
 var amethyst = 0;
 var coal = 0; //3
 var rubis = 0;

@@ -1,4 +1,4 @@
-var hornet = document.getElementById("hornet");
+var generateur = document.getElementById("generateur");
 var knight = document.getElementById("knight");
 var quirell = document.getElementById("quirell");
 var mine = document.getElementById("mine");
@@ -6,8 +6,8 @@ var port = document.getElementById("port");
 var foret = document.getElementById("foret");
 var section = document.getElementById("section");
 var buildings = document.getElementsByClassName("building");
-var hposx = hornet.offsetLeft;
-var hposy = hornet.offsetTop;
+var hposx = generateur.offsetLeft;
+var hposy = generateur.offsetTop;
 var kposx = knight.offsetLeft;
 var kposy = knight.offsetTop;
 var qposx = quirell.offsetLeft;
@@ -26,7 +26,7 @@ var openedscroll = "";
 var openedmenu = "";
 
 document.getElementById("footscroll").style.bottom = -300 + "px";
-hornet.lvl = 1;
+generateur.lvl = 1;
 knight.lvl = 1;
 quirell.lvl = 1;
 
@@ -39,9 +39,9 @@ window.addEventListener("mousedown", function(event) {
         document.body.style.cursor = "none";
 })
 
-hornet.style.position = "absolute";
-hornet.style.left = hposx + "px";
-hornet.style.top = hposy + "px";
+generateur.style.position = "absolute";
+generateur.style.left = hposx + "px";
+generateur.style.top = hposy + "px";
 knight.style.position = "absolute";
 knight.style.left = kposx + "px";
 knight.style.top = kposy + "px";

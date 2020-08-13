@@ -1,10 +1,12 @@
 function scrollup(sbatiemnt) {
     if (openedmenu)
         closemenu();
-    openedscroll = sbatiemnt.id;
-    document.getElementById("fbuildingname").innerHTML = sbatiemnt.name + " lvl " + sbatiemnt.lvl;
     if (document.getElementById("footscroll").style.bottom == "-300px")
     {
+        openedscroll = sbatiemnt.id;
+        document.getElementById("fbuildingname").innerHTML = sbatiemnt.name + " lvl " + sbatiemnt.lvl;
+        if (sbatiemnt = "generateur")
+            opengenerator();
         var scrollfooterup = setInterval(function() {
             document.getElementById("footscroll").style.bottom = parseInt(document.getElementById("footscroll").style.bottom) + 10 + "px";
             if (document.getElementById("footscroll").style.bottom == "0px")
