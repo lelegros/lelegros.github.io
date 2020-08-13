@@ -60,3 +60,11 @@ while (i < buildings.length)
     });
     i++;
 }
+
+document.getElementById("upgradebutton").addEventListener("mouseup", function(event) {
+    if (openedscroll == "generateur")
+    {
+        upgradegenerator();
+        
+    }
+});
