@@ -9,16 +9,23 @@ function openmenu(name)
         while (i < 2)
         {
             document.getElementById("plus" + i).addEventListener("mouseup", function(event) {
-                document.getElementById("batmenubutton" + event.srcElement.id[4] + "lvl").innerHTML = parseInt(document.getElementById("batmenubutton" + event.srcElement.id[4] + "lvl").innerHTML) + 1;
-                console.log("batmenubutton" + event.srcElement.id[4] + "qt");
-                console.log(document.getElementById("batmenubutton1qt"));
-                compteur("batmenubutton" + event.srcElement.id[4] + "qt", 0, 1000 / parseInt(document.getElementById("batmenubutton" + event.srcElement.id[4] + "lvl").innerHTML));
-                document.getElementById("energie").innerHTML = parseInt(document.getElementById("energie").innerHTML) - 10;
+                if (parseInt(document.getElementById("energie").innerHTML) - 10 >= 0)
+                {
+                    document.getElementById("batmenubutton" + event.srcElement.id[4] + "lvl").innerHTML = parseInt(document.getElementById("batmenubutton" + event.srcElement.id[4] + "lvl").innerHTML) + 1;
+                    compteur("batmenubutton" + event.srcElement.id[4] + "qt", 0, 1000 / parseInt(document.getElementById("batmenubutton" + event.srcElement.id[4] + "lvl").innerHTML));
+                    document.getElementById("energie").innerHTML = parseInt(document.getElementById("energie").innerHTML) - 10;
+                }
             })
             document.getElementById("minus" + i).addEventListener("mouseup", function(event) {
-                document.getElementById("batmenubutton" + event.srcElement.id[5] + "lvl").innerHTML = parseInt(document.getElementById("batmenubutton" + event.srcElement.id[5] + "lvl").innerHTML) - 1;
-                document.getElementById("energie").innerHTML = parseInt(document.getElementById("energie").innerHTML) + 10;
-                compteur("batmenubutton" + event.srcElement.id[5] + "qt", 0, 1000 / parseInt(document.getElementById("batmenubutton" + event.srcElement.id[5] + "lvl").innerHTML));
+                if ( parseInt(document.getElementById("batmenubutton" + event.srcElement.id[5] + "lvl").innerHTML) > 0)
+                {
+                    document.getElementById("batmenubutton" + event.srcElement.id[5] + "lvl").innerHTML = parseInt(document.getElementById("batmenubutton" + event.srcElement.id[5] + "lvl").innerHTML) - 1;
+                    document.getElementById("energie").innerHTML = parseInt(document.getElementById("energie").innerHTML) + 10;
+                    if (document.getElementById("batmenubutton" + event.srcElement.id[5] + "lvl").innerHTML != "0")
+                        compteur("batmenubutton" + event.srcElement.id[5] + "qt", 0, 1000 / parseInt(document.getElementById("batmenubutton" + event.srcElement.id[5] + "lvl").innerHTML));
+                    else
+                        clearInterval(increase);
+                }
             })
             i++;
         }

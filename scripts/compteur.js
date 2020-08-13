@@ -4,8 +4,6 @@ function compteur(id, maxid, speed)
     {
         console.log("cleared");
         clearInterval(increase);
-        if (speed == 0)
-            return;
     }
     var compteur = parseInt(document.getElementById(id).innerHTML);
     if (maxid)
