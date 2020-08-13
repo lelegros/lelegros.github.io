@@ -1,16 +1,3 @@
-var stone = 0; //1
-var quartz = 0;
-var agrile = 0; //2
-var amethyst = 0;
-var coal = 0; //3
-var rubis = 0;
-var iron = 0; //4
-var saphire = 0;
-var copper = 0; //5
-var emerald = 0;
-var gold = 0; //6
-var diamond = 0;
-
 function openmenu(name)
 {
     if (document.getElementById("footscroll").style.bottom == "-300px" || document.getElementById("footscroll").style.bottom == "0px")
@@ -31,6 +18,7 @@ function openmenu(name)
             document.getElementById("minus" + i).addEventListener("mouseup", function(event) {
                 document.getElementById("batmenubutton" + event.srcElement.id[5] + "lvl").innerHTML = parseInt(document.getElementById("batmenubutton" + event.srcElement.id[5] + "lvl").innerHTML) - 1;
                 document.getElementById("energie").innerHTML = parseInt(document.getElementById("energie").innerHTML) + 10;
+                compteur("batmenubutton" + event.srcElement.id[5] + "qt", 0, 1000 / parseInt(document.getElementById("batmenubutton" + event.srcElement.id[5] + "lvl").innerHTML));
             })
             i++;
         }
