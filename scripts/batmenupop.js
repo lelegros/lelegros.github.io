@@ -12,7 +12,7 @@ function openmenu(name)
                 if (parseInt(document.getElementById("energie").innerHTML) - 10 >= 0)
                 {
                     document.getElementById("batmenubutton" + event.srcElement.id[4] + "lvl").innerHTML = parseInt(document.getElementById("batmenubutton" + event.srcElement.id[4] + "lvl").innerHTML) + 1;
-                    compteur("batmenubutton" + event.srcElement.id[4] + "qt", 0, 1000 / parseInt(document.getElementById("batmenubutton" + event.srcElement.id[4] + "lvl").innerHTML));
+                    compteur("batmenubutton" + event.srcElement.id[4] + "qt", 1000 / parseInt(document.getElementById("batmenubutton" + event.srcElement.id[4] + "lvl").innerHTML), stone);
                     document.getElementById("energie").innerHTML = parseInt(document.getElementById("energie").innerHTML) - 10;
                 }
             })
@@ -22,7 +22,7 @@ function openmenu(name)
                     document.getElementById("batmenubutton" + event.srcElement.id[5] + "lvl").innerHTML = parseInt(document.getElementById("batmenubutton" + event.srcElement.id[5] + "lvl").innerHTML) - 1;
                     document.getElementById("energie").innerHTML = parseInt(document.getElementById("energie").innerHTML) + 10;
                     if (document.getElementById("batmenubutton" + event.srcElement.id[5] + "lvl").innerHTML != "0")
-                        compteur("batmenubutton" + event.srcElement.id[5] + "qt", 0, 1000 / parseInt(document.getElementById("batmenubutton" + event.srcElement.id[5] + "lvl").innerHTML));
+                        compteur("batmenubutton" + event.srcElement.id[5] + "qt", 1000 / parseInt(document.getElementById("batmenubutton" + event.srcElement.id[5] + "lvl").innerHTML), stone);
                     else
                         clearInterval(increase);
                 }
