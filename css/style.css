@@ -191,6 +191,25 @@ footer
     background-color: blueviolet;
     height: 97%;
     width: 32.33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.batmenulvlbox
+{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plusminus
+{
+    height: 20px;
+    width: auto;
+    border: solid;
 }
 
 .batmenubuttonsspecials

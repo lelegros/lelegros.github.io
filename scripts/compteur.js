@@ -1,7 +1,8 @@
 function compteur(id, maxid, speed)
 {
     var compteur = parseInt(document.getElementById(id).innerHTML);
-    var max = parseInt(document.getElementById(maxid).innerHTML);
+    if (maxid)
+        var max = parseInt(document.getElementById(maxid).innerHTML);
     if (!max)
         max = -1;
     var increase = setInterval(function() {

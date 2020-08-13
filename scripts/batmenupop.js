@@ -18,6 +18,20 @@ function openmenu(name)
         if (document.getElementById("footscroll").style.bottom == "0px")
             scrolldown();
         document.getElementById("batmenupop").style.display = "flex";
+        i = 1;
+        while (i < 2)
+        {
+            document.getElementById("plus" + i).addEventListener("mouseup", function(event) {
+                document.getElementById("batmenubutton" + event.srcElement.id[4] + "lvl").innerHTML = parseInt(document.getElementById("batmenubutton" + event.srcElement.id[4] + "lvl").innerHTML) + 1;
+                console.log("batmenubutton" + event.srcElement.id[4] + "qt");
+                console.log(document.getElementById("batmenubutton1qt"));
+                compteur("batmenubutton" + event.srcElement.id[4] + "qt", 0, 1000 / parseInt(document.getElementById("batmenubutton" + event.srcElement.id[4] + "lvl").innerHTML));
+            })
+            document.getElementById("minus" + i).addEventListener("mouseup", function(event) {
+                document.getElementById("batmenubutton" + event.srcElement.id[5] + "lvl").innerHTML = parseInt(document.getElementById("batmenubutton" + event.srcElement.id[5] + "lvl").innerHTML) - 1;
+            })
+            i++;
+        }
         if (name == "mine")
         {
             openmine();
@@ -40,6 +54,7 @@ function openmine()
 {
     document.getElementById("batmenuname").innerHTML = "Mine";
     document.getElementById("batmenubutton11").hidden = true;
+    document.getElementById("batmenubutton1name").innerHTML = "Stone"
 }
 
 function openforet()
