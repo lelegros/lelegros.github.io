@@ -43,6 +43,8 @@ footer
     width: 100%;
     color: white;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
 }
 
 #divmap
@@ -130,19 +132,12 @@ footer
     height: 100%;
     width: 100%;
     background-color: green;
-    display: flex;
 }
 
 #upgradebutton
 {
-
     background-color:rgb(226, 180, 80);
     color: black;
-    font-weight: bold;
-    font-size: x-large;
-    text-align: center;
-    padding: 20px;
-    
 }
 
 #parameters
