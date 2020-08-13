@@ -135,10 +135,7 @@ footer
 
 #upgradebutton
 {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: auto;
-    margin-top: auto;
+
     background-color:rgb(226, 180, 80);
     color: black;
     font-weight: bold;
