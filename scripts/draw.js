@@ -1,4 +1,4 @@
-function drawer(ele1, ele2) {
+function drawer(ele1, ele2, color) {
     
     var domcanvas = document.getElementById("canvas");
     var hftop = ele1.offsetTop;
@@ -11,7 +11,7 @@ function drawer(ele1, ele2) {
     var kfwidth = ele2.offsetWidth;
     var ctx = domcanvas.getContext("2d");
     ctx.beginPath();
-    ctx.strokeStyle = "#FF2E00";
+    ctx.strokeStyle = color;
     ctx.moveTo(hfleft + (hfwidth / 2), hftop + (hfheight / 2));
     ctx.lineTo(kfleft + (kfwidth / 2), kftop + (kfheight / 2));
     ctx.stroke(); 
@@ -27,11 +27,11 @@ function draw()
     canvas.width = window.innerWidth;
     section.appendChild(canvas);
 
-    drawer(generateur, knight);
-    drawer(generateur, quirell);
-    drawer(generateur, mine);
-    drawer(generateur, foret);
-    drawer(generateur, port);
+    drawer(generateur, knight, "black");
+    drawer(generateur, quirell, "red");
+    drawer(generateur, mine, "grey");
+    drawer(generateur, foret, "green");
+    drawer(generateur, port, "blue");
 }
 
 draw();

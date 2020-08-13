@@ -37,6 +37,7 @@ var copper = 0; //5
 var emerald = 0;
 var gold = 0; //6
 var diamond = 0;
+var batmenuboxlvl = [0, 0, 0, 0, 0, 0];
 
 document.getElementById("footscroll").style.bottom = -300 + "px";
 generateur.lvl = 1;

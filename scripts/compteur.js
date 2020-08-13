@@ -6,8 +6,11 @@ function compteur(id, speed, variable)
         if (variable == "Stone")
         {
             stone++;
-            document.getElementById(id).innerHTML = stone;
-            document.getElementById("stone").innerHTML = stone;
+            if (document.getElementById("batmenuname").innerHTML == "Mine")
+            {
+                document.getElementById(id).innerHTML = stone;
+                document.getElementById("stone").innerHTML = stone;
+            }
         }
     }, speed);
 }
