@@ -24,6 +24,7 @@ var oldtop = "";
 var oldbot = "";
 var openedscroll = "";
 var openedmenu = "";
+var increase = "";
 
 document.getElementById("footscroll").style.bottom = -300 + "px";
 generateur.lvl = 1;
