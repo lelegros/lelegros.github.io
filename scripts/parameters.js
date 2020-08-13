@@ -14,12 +14,12 @@ document.getElementById("paramdark").addEventListener("mouseup", function(event)
         if (document.getElementById("darkonoff").innerHTML == "OFF")
         {
             document.getElementById("darkonoff").innerHTML = "ON";
-            document.getElementById("section").style.backgroundColor = "#323232";
+            section.style.backgroundColor = "#323232";
         }
         else
         {
             document.getElementById("darkonoff").innerHTML = "OFF";
-            document.getElementById("section").style.backgroundColor = "#eeeeee";
+            section.style.backgroundColor = "#eeeeee";
         }
     }
 });

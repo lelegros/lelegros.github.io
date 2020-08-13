@@ -2,7 +2,7 @@ i = 0;
 
 while (i < buildings.length)
 {
-    buildings[i].addEventListener("mousedown", function(event) {
+    buildings[i].img.addEventListener("mousedown", function(event) {
         var x = event.clientX;
         var y = event.clientY;
         var buttonPressed = event.button;

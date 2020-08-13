@@ -218,3 +218,8 @@ footer
     height: 95%;
     width: 30%;
 }
+
+.resetbutton
+{
+    background-color: cadetblue;
+}

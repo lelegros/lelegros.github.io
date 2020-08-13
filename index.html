@@ -12,25 +12,26 @@
 		<header id="header">
 			<div>
 				<span>Energie : </span><span id="energie">100</span><span> / </span><span id="max_energie">100</span><br/>
-				<span>Stone : </span><span id="stone">0</span>
+				<span>Stone : </span><span id="stone">0</span><br/>
+				<span>Frene : </span><span id="frene">0</span><br/>
+				<span>Radeau : </span><span id="radeau">0</span>
 			</div>
 		</header>
 		<section id="section">
 			<div id="divmap">
 				<div class="imges">
 					<img id="mine" name="Mine" class="building" src="data/images/mine.png">
-					<img id="port" name="Port" class="building" src="data/images/port.png">          <!-- Arborescense de mort -->
-					<img id="foret" name="Foret" class="building" src="data/images/foret.png">
+					<img id="docks" name="Docks" class="building" src="data/images/port.png">          <!-- Arborescense de mort -->
+					<img id="forest" name="Forest" class="building" src="data/images/foret.png">
 				</div>
 				<div class="imges">
-					<img id="generateur" name="Generateur" class="building" src="data/images/generateur.png">
+					<img id="generator" name="Generator" class="building" src="data/images/generateur.png">
 					<img id="knight" name="Knight" class="building" src="data/images/knight.png">          <!-- Arborescense de mort -->
 					<img id="quirell" name="Quirell" class="building" src="data/images/quirell.png">
 				</div>
 			</div>
 			<div id="batmenupop">
 				<div id="batmenuname">
-					Building
 				</div>
 				<div id="batmenucontent" class="closemenu">
 					<div id="batmenucontentrows" class="closemenu">
@@ -90,11 +91,11 @@
 				<div id="upgradebutton" class="closefoot">
 					<span id="upgradetext" class="closefoot">UPGRADE</span>
 				</div>
-				<div id="mine_energie" class="closefoot">
-					<span id="mine_energie_text" class="closefoot">Mine</span>
+				<div id="reset_mine_energie" class="closefoot resetbutton">
+					<span id="reset_mine_energie_text" class="closefoot">Reset energy mine cost : 0</span>
 				</div>
-				<div id="forest_energie" class="closefoot">
-					<span id="forest_energie_text" class="closefoot">Forest</span>
+				<div id="reset_forest_energie" class="closefoot resetbutton">
+					<span id="reset_forest_energie_text" class="closefoot">Reset energy forest cost : 0</span>
 				</div>
 			</div>
 			<div id="parameters">
@@ -106,6 +107,7 @@
 				</div>
 			</div>
 		</footer>
+		<script src="scripts/class.js"></script>
 		<script src="scripts/init.js"></script>
 		<script src="scripts/draw.js"></script>
 		<script src="scripts/move.js"></script>

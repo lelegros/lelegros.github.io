@@ -3,42 +3,42 @@ window.addEventListener("mouseup", function(event) {
     document.removeEventListener("mousemove", move);
     if (document.getElementById("popup")) 
         deletepopup();
-    if (building != "")
+    if (active_building != "")
     {
-        if (building.style.top == oldtop && building.style.left == oldleft)
+        if (active_building.style.top == initial_top && active_building.style.left == initial_left)
         {
-            if (building.id == "mine" || building.id == "port" || building.id == "foret")
+            if (active_building.id == "mine" || active_building.id == "port" || active_building.id == "foret")
             {
-                if (openedmenu == building.id)
+                if (openedmenu == active_building.id)
                     closemenu();
                 else
-                    openmenu(building.id);
+                    openmenu(active_building.id);
             }
             else if (document.getElementById("footscroll").style.bottom == "-300px")
-                scrollup(building);
+                scrollup(active_building);
             else if (document.getElementById("footscroll").style.bottom == "0px")
             {
-                if (openedscroll != building.id)
-                    scrollup(building);
+                if (openedscroll != active_building.id)
+                    scrollup(active_building);
                 else
                     scrolldown();
             }
         }
-        else if (building.offsetTop < document.getElementById("header").offsetHeight || building.offsetTop > window.innerHeight - building.offsetHeight 
-            || building.offsetLeft < 0 || building.offsetLeft > window.innerWidth - building.offsetWidth)
+        else if (active_building.offsetTop < document.getElementById("header").offsetHeight || active_building.offsetTop > window.innerHeight - active_building.offsetHeight 
+            || active_building.offsetLeft < 0 || active_building.offsetLeft > window.innerWidth - active_building.offsetWidth)
         {
-            building.style.top = oldtop;
-            building.style.left = oldleft;
+            active_building.style.top = initial_top;
+            active_building.style.left = initial_left;
             draw();
         }
-        building = "";
+        active_building = "";
     }
-    else if (building == "" && openedscroll) //&& event.pageY < 638)
+    else if (active_building == "" && openedscroll)
     {
         if (!event.srcElement.classList.contains("closefoot"))
             scrolldown();
     }
-    else if (building == "" && openedmenu)
+    else if (active_building == "" && openedmenu)
         if (!event.srcElement.classList.contains("closemenu"))
             closemenu();
 });
@@ -47,67 +47,77 @@ i = 0;
 
 while (i < buildings.length)
 {
-    buildings[i].addEventListener("mousedown", function(event) {
+    buildings[i].img.addEventListener("mousedown", function(event)
+    {
         event.preventDefault();
-        var buttonPressed = event.button;
-        if (buttonPressed == 0)
+        if (event.button == 0)
         {
-            building = document.getElementById(event.srcElement.id);
-            oldtop = building.style.top;
-            oldleft = building.style.left;
+            active_building = document.getElementById(event.srcElement.id);
+            initial_top = active_building.style.top;
+            initial_left = active_building.style.left;
             document.addEventListener("mousemove", move);
         }
     });
     i++;
 }
 
-document.getElementById("upgradebutton").addEventListener("mouseup", function(event) {
+document.getElementById("upgradebutton").addEventListener("mouseup", function(event)
+{
     if (openedscroll == "generateur")
-    {
         upgradegenerator();
-        
-    }
 });
 
 i = 1;
 while (i < 2)
 {
     document.getElementById("plus" + i).addEventListener("mouseup", function(event) {
+        if (document.getElementById("batmenuname").innerHTML == "Mine")
+            boxid = parseInt(event.srcElement.id[4]) - 1;
+        else if (document.getElementById("batmenuname").innerHTML == "Foret")
+            boxid = parseInt(event.srcElement.id[4]) + 5;
+        else
+            boxid = parseInt(event.srcElement.id[4]) + 11;
         if (parseInt(document.getElementById("energie").innerHTML) - 10 >= 0)
         {
-            batmenuboxlvl[event.srcElement.id[4] - 1]++;
-            document.getElementById("batmenubutton" + event.srcElement.id[4] + "lvl").innerHTML = batmenuboxlvl[event.srcElement.id[4] - 1];
-            compteur("batmenubutton" + event.srcElement.id[4] + "qt", 1000 / parseInt(document.getElementById("batmenubutton" + event.srcElement.id[4] + "lvl").innerHTML), document.getElementById("batmenubutton" + event.srcElement.id[4] + "name").innerHTML);
+            console.log(boxid);
+            batmenuboxlvl[boxid]++;
+            document.getElementById("batmenubutton" + ((boxid % 6) + 1) + "lvl").innerHTML = batmenuboxlvl[boxid];
+            compteur("batmenubutton" + ((boxid % 6) + 1) + "qt", 1000 / batmenuboxlvl[boxid], document.getElementById("batmenubutton" + ((boxid % 6) + 1) + "name").innerHTML);
             mine_cost += 10;
             cost();
         }
     })
     document.getElementById("minus" + i).addEventListener("mouseup", function(event) {
-        if ( parseInt(document.getElementById("batmenubutton" + event.srcElement.id[5] + "lvl").innerHTML) > 0)
+        if (document.getElementById("batmenuname").innerHTML == "Mine")
+            boxid = parseInt(event.srcElement.id[5]) - 1;
+        else if (document.getElementById("batmenuname").innerHTML == "Foret")
+            boxid = parseInt(event.srcElement.id[5]) + 5;
+        else
+            boxid = parseInt(event.srcElement.id[5]) + 11;
+        if (batmenuboxlvl[boxid] > 0)
         {
-            batmenuboxlvl[event.srcElement.id[5] - 1]--;
-            document.getElementById("batmenubutton" + event.srcElement.id[5] + "lvl").innerHTML = batmenuboxlvl[event.srcElement.id[5] - 1];
+            batmenuboxlvl[boxid]--;
+            document.getElementById("batmenubutton" + ((boxid % 6) + 1) + "lvl").innerHTML = batmenuboxlvl[boxid];
             mine_cost -= 10;
             cost();
-            if (document.getElementById("batmenubutton" + event.srcElement.id[5] + "lvl").innerHTML != "0")
-                compteur("batmenubutton" + event.srcElement.id[5] + "qt", 1000 / parseInt(document.getElementById("batmenubutton" + event.srcElement.id[5] + "lvl").innerHTML), document.getElementById("batmenubutton" + event.srcElement.id[5] + "name").innerHTML);
+            if (batmenuboxlvl[boxid] > "0")
+                compteur("batmenubutton" + ((boxid % 6) + 1) + "qt", 1000 / batmenuboxlvl[boxid], document.getElementById("batmenubutton" + ((boxid % 6) + 1) + "name").innerHTML);
             else
-                clearInterval(increase);
+                clearInterval(increases[boxid / 6]);
         }
     })
     i++;
 }
 
-document.getElementById("mine_energie").addEventListener("mouseup", function(event) {
+document.getElementById("reset_mine_energie").addEventListener("mouseup", function(event) {       //ENFAIT TOUT A REFAIRE
         var lenght = batmenuboxlvl.length;
         while (lenght > 0)
         {
             batmenuboxlvl[lenght - 1] = 0;
-            document.getElementById("batmenubutton1lvl").innerHTML = 0;
-            console.log(batmenuboxlvl[0]);
+            document.getElementById("batmenubutton1lvl").innerHTML = 0; //"batmenubutton" + lenght + "lvl"
             lenght--;
         }
         mine_cost = 0;
         cost();
-        clearInterval(increase);
+        clearInterval(increases[0]);
 });

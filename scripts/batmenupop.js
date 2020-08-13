@@ -28,7 +28,8 @@ function openmine()
     document.getElementById("batmenuname").innerHTML = "Mine";
     document.getElementById("batmenubutton11").hidden = true;
     document.getElementById("batmenubutton1name").innerHTML = "Stone"
-    document.getElementById("stone").innerHTML = stone;
+    document.getElementById("batmenubutton1qt").innerHTML = stone;
+    document.getElementById("batmenubutton1lvl").innerHTML = batmenuboxlvl[0];
 }
 
 function openforet()
@@ -36,7 +37,8 @@ function openforet()
     document.getElementById("batmenuname").innerHTML = "Foret";
     document.getElementById("batmenubutton11").hidden = true;
     document.getElementById("batmenubutton1name").innerHTML = "Frene"
-    document.getElementById("stone").innerHTML = frene;
+    document.getElementById("batmenubutton1qt").innerHTML = frene;
+    document.getElementById("batmenubutton1lvl").innerHTML = batmenuboxlvl[6];
 }
 
 function openport()
@@ -44,7 +46,8 @@ function openport()
     document.getElementById("batmenuname").innerHTML = "Port";
     document.getElementById("batmenubutton11").hidden = false;
     document.getElementById("batmenubutton1name").innerHTML = "Radeau"
-    document.getElementById("stone").innerHTML = radeau;
+    document.getElementById("batmenubutton1qt").innerHTML = radeau;
+    document.getElementById("batmenubutton1lvl").innerHTML = batmenuboxlvl[12];
 }
 
 function closemenu()
@@ -54,4 +57,4 @@ function closemenu()
     openedmenu = "";
 }
 
-document.getElementById("footscroll").style.bottom == "-300px"
+document.getElementById("footscroll").style.bottom == "-300px";

@@ -1,5 +1,5 @@
-function drawer(ele1, ele2, color) {
-    
+function drawer(ele1, ele2, color)
+{
     var domcanvas = document.getElementById("canvas");
     var hftop = ele1.offsetTop;
     var hfheight = ele1.offsetHeight;
@@ -27,11 +27,11 @@ function draw()
     canvas.width = window.innerWidth;
     section.appendChild(canvas);
 
-    drawer(generateur, knight, "black");
-    drawer(generateur, quirell, "red");
-    drawer(generateur, mine, "grey");
-    drawer(generateur, foret, "green");
-    drawer(generateur, port, "blue");
+    drawer(generator.img, knight.img, "black");
+    drawer(generator.img, quirell.img, "red");
+    drawer(generator.img, mine.img, "grey");
+    drawer(generator.img, forest.img, "green");
+    drawer(generator.img, docks.img, "blue");
 }
 
 draw();
