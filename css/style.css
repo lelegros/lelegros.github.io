@@ -135,9 +135,17 @@ footer
 
 #upgradebutton
 {
-    height: 20%;
-    width: 10%;
-    background-color: red;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+    background-color:rgb(226, 180, 80);
+    color: black;
+    font-weight: bold;
+    font-size: x-large;
+    text-align: center;
+    padding: 20px;
+    
 }
 
 #parameters
