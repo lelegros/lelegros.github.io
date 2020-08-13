@@ -7,10 +7,7 @@ function compteur(id, speed, variable)
         {
             stone++;
             if (document.getElementById("batmenuname").innerHTML == "Mine")
-            {
                 document.getElementById(id).innerHTML = stone;
-                document.getElementById("stone").innerHTML = stone;
-            }
         }
     }, speed);
 }

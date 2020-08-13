@@ -36,6 +36,7 @@ function openforet()
     document.getElementById("batmenuname").innerHTML = "Foret";
     document.getElementById("batmenubutton11").hidden = true;
     document.getElementById("batmenubutton1name").innerHTML = "Frene"
+    document.getElementById("stone").innerHTML = frene;
 }
 
 function openport()
@@ -43,6 +44,7 @@ function openport()
     document.getElementById("batmenuname").innerHTML = "Port";
     document.getElementById("batmenubutton11").hidden = false;
     document.getElementById("batmenubutton1name").innerHTML = "Radeau"
+    document.getElementById("stone").innerHTML = radeau;
 }
 
 function closemenu()

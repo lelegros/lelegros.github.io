@@ -75,8 +75,8 @@ while (i < 2)
     document.getElementById("plus" + i).addEventListener("mouseup", function(event) {
         if (parseInt(document.getElementById("energie").innerHTML) - 10 >= 0)
         {
-            batmenuboxlvl[i - 1]++;
-            document.getElementById("batmenubutton" + event.srcElement.id[4] + "lvl").innerHTML = batmenuboxlvl[i - 1];
+            batmenuboxlvl[event.srcElement.id[4] - 1]++;
+            document.getElementById("batmenubutton" + event.srcElement.id[4] + "lvl").innerHTML = batmenuboxlvl[event.srcElement.id[4] - 1];
             compteur("batmenubutton" + event.srcElement.id[4] + "qt", 1000 / parseInt(document.getElementById("batmenubutton" + event.srcElement.id[4] + "lvl").innerHTML), document.getElementById("batmenubutton" + event.srcElement.id[4] + "name").innerHTML);
             mine_cost += 10;
             cost();
@@ -85,7 +85,8 @@ while (i < 2)
     document.getElementById("minus" + i).addEventListener("mouseup", function(event) {
         if ( parseInt(document.getElementById("batmenubutton" + event.srcElement.id[5] + "lvl").innerHTML) > 0)
         {
-            document.getElementById("batmenubutton" + event.srcElement.id[5] + "lvl").innerHTML = parseInt(document.getElementById("batmenubutton" + event.srcElement.id[5] + "lvl").innerHTML) - 1;
+            batmenuboxlvl[event.srcElement.id[5] - 1]--;
+            document.getElementById("batmenubutton" + event.srcElement.id[5] + "lvl").innerHTML = batmenuboxlvl[event.srcElement.id[5] - 1];
             mine_cost -= 10;
             cost();
             if (document.getElementById("batmenubutton" + event.srcElement.id[5] + "lvl").innerHTML != "0")
