@@ -35,9 +35,9 @@ window.addEventListener("mouseup", function(event) {
         }
         building = "";
     }
-    else if (building == "" && openedscroll && event.pageY < 638)
+    else if (building == "" && openedscroll) //&& event.pageY < 638)
     {
-        if (!event.srcElement.classList.contains("closemenu"))
+        if (!event.srcElement.classList.contains("closefoot"))
             scrolldown();
     }
     else if (building == "" && openedmenu)
