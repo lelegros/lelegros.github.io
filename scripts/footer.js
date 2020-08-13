@@ -5,7 +5,7 @@ function scrollup(sbatiemnt) {
     {
         openedscroll = sbatiemnt.id;
         document.getElementById("fbuildingname").innerHTML = sbatiemnt.name + " lvl " + sbatiemnt.lvl;
-        if (sbatiemnt = "generateur")
+        if (sbatiemnt.id == "generateur")
             opengenerator();
         var scrollfooterup = setInterval(function() {
             document.getElementById("footscroll").style.bottom = parseInt(document.getElementById("footscroll").style.bottom) + 10 + "px";

@@ -1,0 +1,1 @@
+//document.getElementById("maxenergie").innerHTML = max_energie;
