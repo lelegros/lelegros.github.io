@@ -97,3 +97,17 @@ while (i < 2)
     })
     i++;
 }
+
+document.getElementById("mine_energie").addEventListener("mouseup", function(event) {
+        var lenght = batmenuboxlvl.length;
+        while (lenght > 0)
+        {
+            batmenuboxlvl[lenght - 1] = 0;
+            document.getElementById("batmenubutton1lvl").innerHTML = 0;
+            console.log(batmenuboxlvl[0]);
+            lenght--;
+        }
+        mine_cost = 0;
+        cost();
+        clearInterval(increase);
+});

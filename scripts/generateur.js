@@ -35,8 +35,4 @@ function cost()
         document.getElementById("forest_energie_text").innerHTML = "Reset forest mine cost : " + forest_cost;
 }
 
-function reset_cost()
-{
-
-}
 
