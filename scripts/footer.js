@@ -27,8 +27,3 @@ function scrolldown()
         }, 1);
     }
 }
-
-document.getElementById("upgradebutton").addEventListener("mouseup", function(event) {
-    document.getElementById(openedscroll).lvl++;
-    document.getElementById("fbuildingname").innerHTML = document.getElementById(openedscroll).name + " lvl " + document.getElementById(openedscroll).lvl;
-});
